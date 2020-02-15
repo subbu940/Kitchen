@@ -1,0 +1,11 @@
+<b>Recipes Menu</b></br>
+{% if recipe_list %}
+    <ul>
+    {% for res in recipe_list %}
+        <li><a href="/recipe/{{res.id}}">{{ res.name }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No recipes are available.</p>
+{% endif %}
+<a href="{%url 'recipe:details' %}"> Create Recipe </a>

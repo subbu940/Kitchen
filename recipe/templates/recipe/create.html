@@ -1,0 +1,9 @@
+<h1> Create Recipe </h1>
+
+<form action="{%url 'recipe:save' %}"  method="post">
+    {% csrf_token %}
+    name:<br> <input type="text" name="name"><br>
+    ingredients:<br> <input type="text" name="ingredients"><br>
+    process    :<br> <input type="text" name="process"><br>
+    <input type="submit" value="save">
+</form>
